@@ -3,7 +3,7 @@
    <a href="/movies/create">Create new movie</a>
 
     {{#each movies}}
-    <h3>{{title}}</h3>
+       <a href="/movies/{{id}}"><h4>{{title}}</h4></a>         
     <ul>
          <li>Genre: {{ genre }} </li>
          <li> Plot: {{ plot }}</li>
@@ -12,5 +12,6 @@
          {{/each}}
 
     </ul>
-    <a href="movies/delete/{{_id}}">Delete</a>
+
+     <a href="/movies/{{id}}/edit">Edit</a>
     {{/each}}
