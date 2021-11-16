@@ -24,6 +24,16 @@ router.post("/create", (req, res)=>{
     });
 })
 
+router.get('/delete/:id', (req, res, next) => {
+    const {id} = req.params
+  
+    Celebrity.findByIdAndDelete(id)
+    .then(()=>{
+      res.redirect("/celebrities");
+    })
+  
+  });
+
 router.get("/", (req,res)=>{
     Celebrity.find()
     .then((celebrities)=>{

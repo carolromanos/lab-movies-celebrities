@@ -1,5 +1,6 @@
 <h1>Celebrities</h1>
 
+   <a href="/celebrities/create">Create new celebrity</a>
 
     {{#each celebrities}}
     <h3>{{name}}</h3>
@@ -8,7 +9,7 @@
          <li> Catch phrase: {{ catchPhrase }}</li>
 
     </ul>
-   
-       {{/each}}
+    <a href="celebrities/delete/{{_id}}">Delete</a>
+    {{/each}}
 
   
